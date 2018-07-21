@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+
+</style>
+</head>
+<body>
+<div class="head">
+    <div class="container-fluid"  align="left">
+        <div class="col-xs-10">
+        <img src="http://logo-all.ru/uploads/posts/2016-04/0_stack_overflow_logo.jpg"  width="200" height="50">
+        </div>
+        {% if request.user.id != none %}
+            <div class="name">
+            <div class="col-xs-1"  align="right">{{request.user}}</div>
+                </div>
+
+            <div class="col-xs-1" align="right"><a  class="btn btn-default" href="{% url 'logout' %}">logout</a></div>
+        {% else %}
+        <div class="col-xs-3" ></div>
+        <div class="col-xs-3" align="right"><a  class="btn btn-default" href="{% url 'login' %}">login</a></div>
+    {% endif %}
+
+    </div>
+        </div>
+
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <div class="list-group-item"><a   href="{% url 'questions_html' %}">All questions</a></div>
+        <div class="list-group-item"><a   href="{% url 'myques_html' %}">My Questions</a></div>
+        <div class="list-group-item"><a   href="{% url 'tags_html' %}">Tags</a></div>
+    </div>
+    <div style="margin-left:25%">
+
+<div class="w3-container ">
+        working
+        <br>
+        test
+        <br>
+        sakfhksjf
+        <br>
+        jdhgf
+        <br>
+        dsfds
+        <br>
+        df
+        <br>
+        fggg
+        <br>fg
+        <br>fggf
+        fgh
+        <br>yu
+        <br>gj
+    working
+        <br>
+        test
+        <br>
+        sakfhksjf
+        <br>
+        jdhgf
+        <br>
+        dsfds
+        <br>
+        df
+        <br>
+        fggg
+        <br>fg
+        <br>fggf
+        fgh
+        <br>yu
+        <br>gj
+    working
+        <br>
+        test
+        <br>
+        sakfhksjf
+        <br>
+        jdhgf
+        <br>
+        dsfds
+        <br>
+        df
+        <br>
+        fggg
+        <br>fg
+        <br>fggf
+        fgh
+        <br>yu
+        <br>gj
+    working
+        <br>
+        test
+        <br>
+        sakfhksjf
+        <br>
+        jdhgf
+        <br>
+        dsfds
+        <br>
+        df
+        <br>
+        fggg
+        <br>fg
+        <br>fggf
+        fgh
+        <br>yu
+        <br>gj
+    </div>
+</div>
+</body>
+</html>

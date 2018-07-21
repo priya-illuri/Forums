@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+     <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body >
+
+    <div class="container" >
+        <div class="col-xs-5">
+             <form method="post">
+                 <fieldset>
+                     <legend>Add Question</legend>
+                     {% csrf_token %}
+                 <div class="form-group" >
+
+                     <div class="col-sm-20">
+                     <label for="{{form.question_title.id_for_label}}">Question Title</label>
+                     {{form.question_title}}
+                     </div>
+                     <br>
+
+                     <div class="col-sm-20">
+                     <label for="{{form.question.id_for_label}}"> Question </label>
+                     {{form.question}}
+                     </div>
+                     <br>
+                     <div class="col-sm-20">
+                     <label for="{{form.tag.id_for_label}}">Question Tag</label>
+                     {{form.tag}}
+                     </div>
+                 </div>
+                     <div align="center">
+
+                     <input class="btn btn-info" type="submit" value="Add"/>
+                 </div>
+                     <br>
+
+                 </fieldset>
+             </form>
+        </div>
+    </div>
+</body>
+</html>

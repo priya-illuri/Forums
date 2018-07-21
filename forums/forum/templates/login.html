@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+         .heading {
+
+   z-index:1;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #659DBD;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.footer
+{
+z-index:1;
+bottom:0px;
+overflow: hidden;
+    background-color: #77A6F7;
+    padding: 2px;
+    top:99%;
+    width:100%;
+    }
+    </style>
+</head>
+<body style="background-color:#ffffcc;">
+         <div class="heading" >
+    <div class="container-fluid"  style="padding-bottom:10px; " align="left" >
+        <div class="col-xs-10">
+        <img src="https://preview.ibb.co/en7MYd/forum3d.jpg" alt="page_logoo"  width="15%" height="50" >
+        </div>
+        {% if request.user.id != none %}
+            <div class="name">
+            <div class="col-xs-1"  style="color:white;"  align="right">{{request.user}}</div>
+                </div>
+
+            <div class="col-xs-1" align="right"><a  class="btn btn-default" href="{% url 'logout' %}">logout</a></div>
+        {% else %}
+        <div class="col-xs-1" ></div>
+        <div class="col-xs-1" align="right"><a  class="btn btn-default" href="{% url 'login' %}">login</a></div>
+    {% endif %}
+
+    </div>
+        </div>
+
+<hr>
+
+   <div class="w3-container" style="padding:50px; height:100%;">
+        <div  class="col-xs-3"></div>
+        <div class="col-xs-6" >
+             <form method="post">
+                 <fieldset>
+                     <legend>Login</legend>
+                     {% csrf_token %}
+                 <div class="form-group" align="center">
+
+                     <div>
+                         <label class="col-xs-4"  style="padding-top:2px;" for="{{form.username.id_for_label}}">Username: </label>
+                         <div class="col-xs-8" align="left">{{form.username}}</div>
+                     </div>
+                     <div style="padding:30px;"></div>
+                     <div>
+                     <label class="col-xs-4" style="padding-top:2px;" for="{{form.password.id_for_label}}">Password: </label>
+                         <div class="col-xs-8" align="left">{{form.password}}</div>
+                     </div>
+
+                     <br>
+                     <!--{{form.as_p}}-->
+                 </div>
+                     <div class="col-xs-5" style="top:200px;"></div>
+                     <div align="right" class="col-xs-4" style="padding:30px;">
+                        <!--<input class="col-xs-4" type="submit" value="login"/>-->
+                     <!--<input class="btn btn-info" type="submit" value="login"/>-->
+                         <button type="submit"  class="btn btn-success">Log In</button>
+                 </div>
+
+                     <div align="right" class="col-xs-3" style="top:9px;">
+
+                         <h3><a class="btn btn-success" href="{% url 'signup' %}">Sign Up</a></h3>
+
+                     </div>
+
+                 </fieldset>
+             </form>
+        </div>
+    </div>
+
+<div class="w3-container">
+<div class="footer">
+    <div style="color:black" align="center" >© Illuri Priyanka</div>
+</div>
+        </div>
+</body>
+</html>

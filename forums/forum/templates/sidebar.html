@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+
+</style>
+</head>
+<body>
+
+    <div >
+        <div class="list-group-item"><a   href="{% url 'questions_html' %}">All questions</a></div>
+        <div class="list-group-item"><a   href="{% url 'myques_html' %}">My Questions</a></div>
+        <div class="list-group-item"><a   href="{% url 'tags_html' %}">Tags</a></div>
+    </div>
+</body>
+</html>

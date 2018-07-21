@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment here</title>
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body >
+
+    <div id="includedcontent" class="container">
+        <div class="form-group ">
+             <form class="form-horizantal" method="post">
+                 <fieldset>
+                     <legend>Add Comment</legend>
+                     {% csrf_token %}
+                        <div class="col-sm-10">
+
+                     <label  for="{{form.comment.id_for_label}}"> comment </label><br>
+                     {{form.comment}}
+
+                     </div>
+
+
+                 </fieldset>
+                 <br>
+                 <div class="form-group" >
+                            <input class='btn btn-default' style="left=150px;" type="submit" value="submit"/>
+                 </div>
+             </form>
+        </div>
+    </div>
+</body>
+</html>
