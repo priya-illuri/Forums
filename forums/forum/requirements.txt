@@ -29,7 +29,7 @@ psutil==5.4.6
 psycopg2==2.7.5
 py==1.5.2
 Pygments==2.2.0
-PyJWT==1.6.4
+PyJWT==2.4.0
 PyMySQL==0.8.1
 PyMysqlDB==0.0.2
 pytest==3.2.5
